@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" href="#"/>
+</head>
+<body>
+<form action="/register" method="post">
+    <span th:text="${msg}" style="color: red"></span>
+    <table>
+        <tr>
+            <td>用户名：</td>
+            <td><input type="text" name="username"/></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input type="password" name="password"/></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="注册"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

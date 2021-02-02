@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.thymrleaf.org/thymeleaf-extras-shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="shortcut icon" href="#"/>
+</head>
+<body>
+<div th:if="${session.testUser != null}">
+		<span th:text="'欢迎回来 '+${session.testUser.username}+'!  '">
+		</span><a href="/logout">退出</a>
+</div>
+
+<a href="/main">main</a>
+<span shiro:hasPermission="manage"> | <a href="/manage">manage</a></span>
+<span shiro:hasRole="admin"> | <a href="/admin">admin</a></span>
+<br>
+
+</body>
+</html>
